@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #06111F;
+  --bg-sidebar: #08172A;
+  --bg-card: #0B1B30;
+  --bg-elevated: #10243D;
+  --bg-hover: #132b49;
+
+  --color-primary: #3B82F6;
+  --color-healthy: #34D399;
+  --color-warning: #FBBF24;
+  --color-critical: #FB7185;
+  --color-violet: #A78BFA;
+  
+  --text-primary: #EAF2FF;
+  --text-secondary: #91A6C4;
+  --text-muted: #627D98;
+  
+  --border-subtle: #203651;
+  --border-active: #3B82F6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #06111F;
+  color: #EAF2FF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #06111F;
+}
+
+/* Custom SOC scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #203651;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Radar pulse animation for threats */
+@keyframes threat-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(251, 113, 133, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(251, 113, 133, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 113, 133, 0);
+  }
+}
+
+.threat-pulse {
+  animation: threat-pulse 2s infinite;
+}
+
+@keyframes ai-glow {
+  0%, 100% {
+    border-color: rgba(167, 139, 250, 0.4);
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.15);
+  }
+  50% {
+    border-color: rgba(167, 139, 250, 0.8);
+    box-shadow: 0 0 25px rgba(167, 139, 250, 0.3);
+  }
+}
+
+.ai-card-glow {
+  animation: ai-glow 3s infinite ease-in-out;
+}
+
+/* Monospace font for telemetry and IP addresses */
+.font-mono-telemetry {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
