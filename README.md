@@ -30,18 +30,6 @@ ARC is an enterprise-grade Security Operations Center (SOC) monitoring, threat d
 - **Node.js** (v18+) and **npm**
 - **Python** (v3.9+)
 
-### One-Command Startup
-To start both the FastAPI backend and Vite frontend concurrently:
-
-```bash
-./run.sh
-```
-
-- **Web Dashboard**: [http://localhost:5173](http://localhost:5173)
-- **Interactive API Documentation (Swagger)**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-
----
-
 ### Manual Startup (Alternative)
 
 #### 1. Backend (FastAPI & Detection Engine)
